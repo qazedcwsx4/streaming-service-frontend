@@ -11,13 +11,18 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { LoginComponent } from './login/login.component';
 import {MatButtonModule} from '@angular/material/button';
 import { AnimeListComponent } from './anime-list/anime-list.component';
+import {RoutingModule} from './routing/routing.module';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
+import { AnimeCardComponent } from './anime-card/anime-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     LoginComponent,
-    AnimeListComponent
+    AnimeListComponent,
+    AnimeCardComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,10 @@ import { AnimeListComponent } from './anime-list/anime-list.component';
     FormsModule,
     MatInputModule,
     FlexLayoutModule,
-    MatButtonModule
+    MatButtonModule,
+    RoutingModule,
+    MatGridListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
