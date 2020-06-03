@@ -1,0 +1,7 @@
+.mat-card-content > p {
+  text-overflow: ellipsis;
+}
+
+app-anime-card {
+  margin: 5px 5px 40px;
+}
