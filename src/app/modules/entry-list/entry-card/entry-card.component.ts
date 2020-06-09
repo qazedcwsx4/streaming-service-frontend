@@ -1,11 +1,11 @@
 import {Component, Input, ViewEncapsulation} from '@angular/core';
 
 @Component({
-  selector: 'app-anime-card',
-  templateUrl: './anime-card.component.html',
-  styleUrls: ['./anime-card.component.css'],
+  selector: 'app-entry-card',
+  templateUrl: './entry-card.component.html',
+  styleUrls: ['./entry-card.component.css'],
 })
-export class AnimeCardComponent {
+export class EntryCardComponent {
 
   constructor() { }
 

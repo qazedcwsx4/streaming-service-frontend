@@ -7,11 +7,11 @@ interface Entry{
 }
 
 @Component({
-  selector: 'app-anime-list',
-  templateUrl: './anime-list.component.html',
-  styleUrls: ['./anime-list.component.css']
+  selector: 'app-entry-list',
+  templateUrl: './entry-list.component.html',
+  styleUrls: ['./entry-list.component.css']
 })
-export class AnimeListComponent implements OnInit {
+export class EntryListComponent implements OnInit {
 
   constructor() { }
 

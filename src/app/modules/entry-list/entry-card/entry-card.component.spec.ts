@@ -1,25 +1,25 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AnimeListComponent } from './anime-list.component';
+import { EntryCardComponent } from './entry-card.component';
 
-describe('AnimeListComponent', () => {
-  let component: AnimeListComponent;
-  let fixture: ComponentFixture<AnimeListComponent>;
+describe('AnimeCardComponent', () => {
+  let component: EntryCardComponent;
+  let fixture: ComponentFixture<EntryCardComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AnimeListComponent ]
+      declarations: [ EntryCardComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AnimeListComponent);
+    fixture = TestBed.createComponent(EntryCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should entry-create', () => {
     expect(component).toBeTruthy();
   });
 });
