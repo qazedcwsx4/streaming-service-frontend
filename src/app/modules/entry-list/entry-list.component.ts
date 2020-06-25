@@ -9,7 +9,7 @@ interface Entry{
 @Component({
   selector: 'app-entry-list',
   templateUrl: './entry-list.component.html',
-  styleUrls: ['./entry-list.component.css']
+  styleUrls: ['./entry-list.component.scss']
 })
 export class EntryListComponent implements OnInit {
 

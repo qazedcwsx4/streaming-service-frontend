@@ -7,6 +7,7 @@ import {RoutingModule} from './modules/routing/routing.module';
 import {EntryListModule} from './modules/entry-list/entry-list.module';
 import {LoginModule} from './modules/login/login.module';
 import {ToolbarModule} from './modules/toolbar/toolbar.module';
+import {EntryCreateModule} from './modules/entry-create/entry-create.module';
 import {FlexModule} from '@angular/flex-layout';
 
 @NgModule({
