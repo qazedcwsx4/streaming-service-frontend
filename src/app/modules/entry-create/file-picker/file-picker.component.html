@@ -1,1 +1,16 @@
-<p>file-picker works!</p>
+<div class="container" fxLayout="column">
+  <div fxFlex="100%">
+    <button mat-raised-button color="primary" style="margin-top:10px; margin-bottom: 10px; float: right"
+            (click)=fileInput.click()>Upload
+    </button>
+    <input hidden (change)="onFilesPicked($event)" #fileInput type="file" multiple id="file">
+  </div>
+  <div>
+    <app-file-row
+      *ngFor="let file of pickedFiles"
+      [file]=file
+      (fileDeletedEvent)=fileDeletedHandler($event)
+      style="width: 100%">
+    </app-file-row>
+  </div>
+</div>

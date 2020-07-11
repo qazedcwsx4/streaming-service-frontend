@@ -8,6 +8,10 @@ import {FlexModule} from '@angular/flex-layout';
 import {MalDownloaderComponent} from './mal-downloader/mal-downloader.component';
 import {FilePickerComponent} from './file-picker/file-picker.component';
 import {EntryFormComponent} from './entry-form/entry-form.component';
+import {FormsModule} from '@angular/forms';
+import {FileRowComponent} from './file-picker/file-row/file-row.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -15,14 +19,18 @@ import {EntryFormComponent} from './entry-form/entry-form.component';
     EntryCreateComponent,
     MalDownloaderComponent,
     FilePickerComponent,
-    EntryFormComponent
+    EntryFormComponent,
+    FileRowComponent
   ],
   imports: [
     CommonModule,
     MatFormFieldModule,
     MatButtonModule,
     MatInputModule,
-    FlexModule
+    FlexModule,
+    FormsModule,
+    MatCardModule,
+    MatIconModule
   ]
 })
 export class EntryCreateModule {

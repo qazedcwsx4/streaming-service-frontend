@@ -6,4 +6,8 @@ export class Anime {
   score: number;
   rank: number;
   popularity: number;
+  episodeCount: number;
+
+  constructor(){
+  }
 }

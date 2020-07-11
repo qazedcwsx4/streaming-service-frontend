@@ -1,10 +1,19 @@
+@import "src/variables.scss";
+
 .formSection{
-  background-color: #ffffff;
+  background-color: $form-section-color;
   padding: 5px 20px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
-.form{
+.padded{
+  padding: 5px 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 
+.form-container {
+  margin-top: 100px;
+  background-color: $form-container-color;
 }

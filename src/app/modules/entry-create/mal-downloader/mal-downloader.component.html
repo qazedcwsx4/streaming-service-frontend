@@ -1,9 +1,9 @@
 <div style="width: calc(100% - 80px);display: inline-block;">
   <mat-form-field>
     <mat-label>Mal ID</mat-label>
-    <input matInput>
+    <input matInput [(ngModel)]="malId">
   </mat-form-field>
 </div>
 <div style="width: 80px; height: 100%; display: inline-block; float: right">
-  <button mat-raised-button color="primary" style="margin-top:10px; float: right">Fetch</button>
+  <button mat-raised-button color="primary" style="margin-top:10px; float: right" (click)="fetchAnime(malId)">Fetch</button>
 </div>

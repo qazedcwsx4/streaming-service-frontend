@@ -1,5 +1,6 @@
 <div class="container" fxLayout="row wrap" fxFlexAlign="center" fxLayoutAlign="center">
-  <app-entry-card *ngFor="let entry of entries" [title] = "entry.title"
+  <app-entry-card *ngFor="let entry of entries"
+                  [title] = "entry.title"
                   [description]="entry.description"
                   [imageUrl]="entry.imageUrl"
                   fxFlex="22%" fxFlex.lt-md="50%"></app-entry-card>

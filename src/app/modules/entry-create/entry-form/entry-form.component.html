@@ -1,39 +1,49 @@
 <div fxLayout="column">
   <div>
-    <mat-form-field>
-      <mat-label>Title</mat-label>
-      <input matInput>
-    </mat-form-field>
+    <div fxLayout="row">
+      <div fxFlex="80%">
+        <mat-form-field>
+          <mat-label>Title</mat-label>
+          <input matInput [(ngModel)]='this.anime.name'>
+        </mat-form-field>
+      </div>
+      <div fxFlex="20%">
+        <mat-form-field>
+          <mat-label>Episodes</mat-label>
+          <input matInput [(ngModel)]='this.anime.episodeCount'>
+        </mat-form-field>
+      </div>
+    </div>
   </div>
   <div>
     <mat-form-field>
       <mat-label>Image URL</mat-label>
-      <input matInput>
+      <input matInput [(ngModel)]='this.anime.imageUrl'>
     </mat-form-field>
   </div>
   <div>
     <mat-form-field>
       <mat-label>Description</mat-label>
-      <textarea cdkTextareaAutosize cdkAutosizeMinRows="1" matInput></textarea>
+      <textarea cdkTextareaAutosize cdkAutosizeMinRows="1" matInput [(ngModel)]='this.anime.description'></textarea>
     </mat-form-field>
   </div>
   <div fxLayout="row">
     <div fxFlex="33%">
       <mat-form-field>
-        <mat-label>Image URL</mat-label>
-        <input readonly matInput>
+        <mat-label>Score</mat-label>
+        <input readonly matInput [(ngModel)]='this.anime.score'>
       </mat-form-field>
     </div>
     <div fxFlex="33%">
       <mat-form-field>
-        <mat-label>Image URL</mat-label>
-        <input readonly matInput>
+        <mat-label>Rank</mat-label>
+        <input readonly matInput [(ngModel)]='this.anime.rank'>
       </mat-form-field>
     </div>
     <div fxFlex="34%">
       <mat-form-field>
-        <mat-label>Image URL</mat-label>
-        <input readonly matInput>
+        <mat-label>Popularity</mat-label>
+        <input readonly matInput [(ngModel)]='this.anime.popularity'>
       </mat-form-field>
     </div>
   </div>

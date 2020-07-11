@@ -1,20 +1,31 @@
-<div class="container" fxLayout="row" fxLayoutAlign="center center" style="padding-top: 100px">
-
-  <div fxFlex.xl="100%" fxFlex.lg="100%" fxFlex.md="100%" fxFlex.sm="100%" fxFlex.xs="100%">
-
+<div class="container form-container mat-elevation-z1" fxLayout="row">
+  <div fxFlex="100%">
     <div fxLayout="row" fxLayout.xs="column">
       <div fxFlex="50%" fxLayout="column" style="padding: 10px;">
         <div class="mat-elevation-z1 formSection">
-          <app-mal-downloader></app-mal-downloader>
+          <app-mal-downloader
+            [anime]=anime
+            (animeFetchedEvent)="animeFetchedHandler($event)">
+          </app-mal-downloader>
         </div>
         <div class="mat-elevation-z1 formSection">
-          <app-entry-form></app-entry-form>
+          <app-entry-form
+            [anime]=anime>
+          </app-entry-form>
         </div>
       </div>
-
-      <div fxFlex="50%" fxLayout="column" style="padding: 10px;">
+      <div fxFlex="50%" fxLayout="column" style="padding: 10px; justify-content: space-between">
         <div class="mat-elevation-z1 formSection">
-          <app-file-picker></app-file-picker>
+          <app-file-picker
+            [pickedFiles]=files
+            (filesPickedEvent)="filesPickedHandler($event)">
+          </app-file-picker>
+        </div>
+        <div class="formSection" style="background-color: inherit">
+          <button mat-raised-button color="primary" style="margin-top:10px; margin-bottom: 10px; float: right"
+                  (click)=onFormSubmitted()>
+            Submit <mat-icon inline>send</mat-icon>
+          </button>
         </div>
       </div>
     </div>

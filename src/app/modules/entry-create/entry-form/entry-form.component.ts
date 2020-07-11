@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnChanges, OnInit, Output} from '@angular/core';
+import {Anime} from '../../shared/anime.model';
 
 @Component({
   selector: 'app-entry-form',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./entry-form.component.scss']
 })
 export class EntryFormComponent implements OnInit {
+
+  @Input() anime: Anime;
 
   constructor() { }
 

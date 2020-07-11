@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-file-picker',
@@ -7,7 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilePickerComponent implements OnInit {
 
-  constructor() { }
+  @Input() pickedFiles: Array<File>;
+  @Output() filesPickedEvent = new EventEmitter<Array<File>>();
+
+  onFilesPicked(e: Event) {
+    console.log('picked');
+    this.pickedFiles = Array.from((e.target as HTMLInputElement).files);
+    this.filesPickedEvent.emit(this.pickedFiles);
+  }
+
+  fileDeletedHandler(file: File){
+    this.pickedFiles = this.pickedFiles.filter(it => it !== file);
+  }
+
+
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

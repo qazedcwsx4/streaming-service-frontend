@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Anime} from '../../shared/anime.model';
+import {AnimeService} from '../anime.service';
 
 @Component({
   selector: 'app-mal-downloader',
@@ -7,7 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MalDownloaderComponent implements OnInit {
 
-  constructor() { }
+  @Input() readonly anime: Anime;
+
+  @Output() animeFetchedEvent = new EventEmitter<Anime>();
+
+  malId: string;
+
+  fetchAnime(id: string) {
+    this.animeService.fetchAnimeData(id)
+      .subscribe(it => this.animeFetchedEvent.emit(it));
+  }
+
+  constructor(
+    private animeService: AnimeService
+  ) {
+  }
 
   ngOnInit(): void {
   }
